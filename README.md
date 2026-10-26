@@ -1,2 +1,2 @@
 # useitup
-This is my first site that I made and published here.I published the site here for everyone that is curious and wants to see how the site is structured and operates. I hope that you enjoy this site of mine.The site is build with Node/Express.
+Mobile-first food-waste tracker on Express: rate limiting, honeypot spam protection, Helmet security headers, cookie consent, SEO-ready pages and a custom 404. A small but production-minded full-stack starter.
