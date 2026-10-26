@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UseItUp: Track Expiry Dates and Stop Wasting Food</title>
+<meta name="description" content="Free tool that tracks what is in your fridge, shows what to eat first before it expires, and suggests recipes to use it up. Waste less, save money.">
+<link rel="canonical" href="https://useitup.example/">
+<meta property="og:title" content="UseItUp: stop wasting food">
+<meta property="og:description" content="Add what's in your fridge, see what to eat first, get recipe ideas.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2f5d50">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🥕%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<header class="top"><a class="logo" href="/">UseItUp</a>
+<nav aria-label="Main"><a href="#fridge">My fridge</a><a href="#ideas">Recipes</a><a href="#contact">Contact</a></nav></header>
+<main>
+<section class="hero" id="add">
+<h1>What in your fridge is about to turn?</h1>
+<p>Add it with a use-by date. UseItUp lists what to eat first and suggests meals that use it up.</p>
+<form id="item-form" novalidate>
+<label for="food">Food</label><input id="food" name="food" autocomplete="off" placeholder="Spinach">
+<p class="err" data-for="food" aria-live="polite"></p>
+<label for="exp">Use by</label><input id="exp" name="exp" type="date">
+<p class="err" data-for="exp" aria-live="polite"></p>
+<div><button class="btn" type="submit">Add to my fridge</button></div>
+</form>
+</section>
+<section id="fridge"><h2>My fridge</h2>
+<p class="meta">Items eaten in time: <strong id="saved">0</strong></p>
+<ul id="list" class="notes"></ul></section>
+<section id="ideas"><h2>Cook this first</h2><ul id="recipes"></ul></section>
+<section><h2>Why bother</h2>
+<p>The UN's Food and Agriculture Organization estimates that around a third of the food produced for people is lost or wasted. A lot of what goes in the bin at home was simply forgotten. A short list sorted by date fixes that.</p></section>
+<section id="contact"><h2>Send us a note</h2>
+<p>Found a bug or have a recipe idea? Tell us.</p>
+<form id="contact-form" novalidate>
+<label for="who">Your name</label><input id="who" name="who" autocomplete="name">
+<p class="err" data-for="who" aria-live="polite"></p>
+<label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email">
+<p class="err" data-for="email" aria-live="polite"></p>
+<label for="message">Message</label><textarea id="message" name="message" rows="5"></textarea>
+<p class="err" data-for="message" aria-live="polite"></p>
+<div class="hp" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+<input type="hidden" name="ts">
+<div><button class="btn" type="submit">Send message</button></div>
+<p id="status" class="meta" role="status"></p>
+</form></section>
+</main>
+<footer><p>UseItUp is free. <a href="/privacy">Privacy</a></p></footer>
+<a class="sticky" href="#add">Add food to my fridge</a>
+<div class="cookie" id="cookie" role="dialog" aria-label="Cookie choice" hidden>
+<p>Keep your fridge list on this device between visits? This uses one cookie and local storage. Nothing is tracked or sent anywhere.</p>
+<button type="button" id="yes">Yes, remember it</button><button type="button" id="no">No, only this visit</button></div>
+</body>
+</html>
